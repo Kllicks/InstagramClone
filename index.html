@@ -10,8 +10,14 @@
 </head>
 <body>
     <h1>Instaclone</h1>
-    <div class="thumbnail-container">
-        <div class="thumbnail-item">
+    
+    <!-- I need to generate a .thumbnail-item div and an img element for every image URL in my images array.
+    
+    I will append each of those .thumbnail-item divs to the .thumbnail-container
+
+    -->
+    <div class="thumbnail-container" data-container>
+        <!-- <div class="thumbnail-item">
             <img src="https://i.pinimg.com/originals/11/7e/7f/117e7ff84b972970c000250f69d9f98e.jpg" alt="">
         </div>
         <div class="thumbnail-item">
@@ -37,10 +43,11 @@
         </div>
         <div class="thumbnail-item">
             <img src="http://ava7.com/w/basketball-teams/houston-rockets/houston-rockets-nba-basketball-team.jpg" alt="">
-        </div>
+        </div> -->
     </div>
     <div class="picture-frame">
-        <img src="https://i.pinimg.com/originals/11/7e/7f/117e7ff84b972970c000250f69d9f98e.jpg" alt="">
+        <!-- This is my "output" for when the user clicks a thumbnails. I will modify the src attribute and set it to the same src as the thumbnail that got clicked. -->
+        <img data-output src="" alt="">
     </div>
     <script src="scripts/index.js"></script>
 </body>
