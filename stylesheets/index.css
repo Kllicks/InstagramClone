@@ -19,18 +19,27 @@ html, body {
 /* begin picture frame technique to resize images */
 .thumbnail-item {
     /* controls the size of the image */
-    width: 150px;
     height: 150px;
+    width: 30%;
+    margin-bottom: 20px;
+    /* outline: 1px solid red; */
+
+    /* alternative to using flexbox for centering of images or text */
+    text-align: center;
 }
 
 .thumbnail-item > img {
     /* the img adapts to its parent */
-    /* choose either the height or width, not both */
-    width: 100%;
+    /* definitely use both max-height and max-width */
+    max-height: 100%;
+    max-width: 100%;
 }
 /* end picture frame technique */
 
 .thumbnail-container {
     display: flex;
     flex-wrap: wrap;
+/*  Distributes left over space:   
+    justify-content: space-around; */
+
 }
