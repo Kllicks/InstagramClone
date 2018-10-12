@@ -15,3 +15,12 @@ function createImage(imageURL) {
 
     return theImage;
 }
+
+// function that generates the thumbnail div
+function createThumnnail(imageURL) {
+    const theContainer = document.createElement('div');
+    theContainer.classList.add(`thumbnail-item`);
+    theContainer.appendChild(createImage(imageURL));
+
+    return theContainer;
+}
