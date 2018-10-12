@@ -14,8 +14,17 @@ function createImage(imageURL) {
     // theImage.setAttribute('src', imageURL);
 
     // add an event listener to the image
-    theImage.addEventListener('click', function() {
+    theImage.addEventListener('click', function(event) {
         console.log('hello');
+        // the element that got clicked is accessible
+        // as `event.target`
+        // and, i can read the `src` attribute!
+        console.log(event.target.src);
+
+        // i can now set the image's/outputElement's src 
+        // to `event.target.src`
+        
+        
     });
 
     return theImage;
