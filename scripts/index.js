@@ -13,14 +13,25 @@ function createImage(imageURL) {
     theImage.src =imageURL;
     // theImage.setAttribute('src', imageURL);
 
+    // add an event listener to the image
+    theImage.addEventListener('click', function() {
+        console.log('hello');
+    });
+
     return theImage;
 }
 
 // function that generates the thumbnail div
-function createThumnnail(imageURL) {
+function createThumbnail(imageURL) {
     const theContainer = document.createElement('div');
     theContainer.classList.add(`thumbnail-item`);
     theContainer.appendChild(createImage(imageURL));
 
     return theContainer;
 }
+
+// just draw a thumbnail to the body
+// so we can test the click ability
+let firstImageURL = IMAGES[0];
+let testThumb = createThumbnail(firstImageURL)
+document.body.appendChild(testThumb);
