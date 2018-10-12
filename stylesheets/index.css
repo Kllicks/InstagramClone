@@ -1,4 +1,12 @@
 /*  border-box hack */
+/* ----------------- */
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
 
 /* special feature */
 html, body {
