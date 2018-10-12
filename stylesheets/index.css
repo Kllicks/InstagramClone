@@ -39,7 +39,18 @@ html, body {
 .thumbnail-container {
     display: flex;
     flex-wrap: wrap;
-/*  Distributes left over space:   
-    justify-content: space-around; */
+/* Distributes left over space: */
+    justify-content: space-around; 
 
+}
+
+.picture-frame { 
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.picture-frame > img {
+    max-height: 100%;
+    max-width: 100%;
 }
