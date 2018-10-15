@@ -79,9 +79,11 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 200ms ease-in-out;
 }
 
 .modal-hidden {
-    display: none;
+    /* display: none; */
     /* visibility: hidden; */
+    transform: scale(0.00001);
 }
