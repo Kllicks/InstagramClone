@@ -18,13 +18,15 @@ function createImage(imageURL) {
     // add an event listener to the image
     theImage.addEventListener('click', function(event) {
         console.log('test');
-        console.log(event.target.src);
         // the element that got clicked is accessible
         // as `event.target`
         // and, i can read the `src` attribute!
+        console.log(event.target.src);
+
         // i can now set the image's/outputElement's src 
         // to `event.target.src`
-        theImage.parentNode.removeChild(theImage);
+        // theImage.parentNode.removeChild(theImage);
+        // outputElement.setAttribute(`src`, event.target.src);
         outputElement.src = event.target.src;
         
     });
@@ -51,7 +53,6 @@ function drawThumbnail() {
 // just draw a thumbnail to the body
 // so we can test the click ability
 drawThumbnail();
-// drawThumbnail();
-// drawThumbnail();
+
 
 // style this larger version of the image so that it's at least 500px x 500px

@@ -48,8 +48,6 @@ html, body {
     max-width: 90%;
     margin: 0 auto;
     text-align: center;
-    /* display: flex;
-    justify-content: space-around; */
 }
 
 .picture-frame > img {
