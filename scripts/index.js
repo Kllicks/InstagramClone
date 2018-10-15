@@ -4,6 +4,7 @@ const IMAGES = [
     "https://www.pixel-creation.com/wp-content/uploads/houston-texans-computer-wallpaper-52917-1600x900-px-hdwallsource-800x800.jpg",
     "http://ava7.com/w/basketball-teams/houston-rockets/houston-rockets-nba-basketball-team.jpg"
 ]
+const thumbnailContainer = document.querySelector('[data-container]');
 const outputElement = document.querySelector('[data-output]');
 let index = 0;
 
@@ -43,16 +44,29 @@ function createThumbnail(imageURL) {
     return theContainer;
 }
 
-function drawThumbnail() {
-    let firstImageURL = IMAGES[index];
-    let testThumb = createThumbnail(firstImageURL);
-    document.body.appendChild(testThumb);
-    index ++;
-}
+// MY ATTEMPT:
+// function drawThumbnail() {
+//     let firstImageURL = IMAGES[index];
+//     let testThumb = createThumbnail(firstImageURL);
+//     document.body.appendChild(testThumb);
+//     index ++;
+// }
 
 // just draw a thumbnail to the body
 // so we can test the click ability
-drawThumbnail();
+
+// CHRIS's walkthrough:
+// loop through the IMAGES array
+// for each image, call the anonymous function
+// the anon func should expect to receive an image URL
+IMAGES.forEach(function (anImageUrl) {
+
+    // We pass that image URL ro our createThumbnail func
+    let aThumbnail = createThumbnail(anImageUrl);
+
+    // then append that thumbnail to the page
+    thumbnailContainer.appendChild(aThumbnail);
+})
 
 
 // style this larger version of the image so that it's at least 500px x 500px
