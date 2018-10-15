@@ -6,7 +6,8 @@ const IMAGES = [
 ]
 const thumbnailContainer = document.querySelector('[data-container]');
 const outputElement = document.querySelector('[data-output]');
-let index = 0;
+const modalElement = document.querySelector('[data-modal]');
+// console.log(modalElement);
 
 // function that generates the thumbnail div
 // function that generates an imag element
@@ -29,6 +30,9 @@ function createImage(imageURL) {
         // theImage.parentNode.removeChild(theImage);
         // outputElement.setAttribute(`src`, event.target.src);
         outputElement.src = event.target.src;
+        // modalElement.classList.toggle(`modal-hidden`);
+        // "remove" is more specific, so we'll use that
+        modalElement.classList.remove(`modal-hidden`);
         
     });
 
@@ -52,9 +56,6 @@ function createThumbnail(imageURL) {
 //     index ++;
 // }
 
-// just draw a thumbnail to the body
-// so we can test the click ability
-
 // CHRIS's walkthrough:
 // loop through the IMAGES array
 // for each image, call the anonymous function
@@ -66,7 +67,15 @@ IMAGES.forEach(function (anImageUrl) {
 
     // then append that thumbnail to the page
     thumbnailContainer.appendChild(aThumbnail);
-})
+});
 
-
-// style this larger version of the image so that it's at least 500px x 500px
+window.addEventListener('keydown', function () {
+    // console.log(`you pressed a key`);
+    // console.log(event);
+    // key: "Escape"
+    // keyCode: 27
+    if (event.keyCode === 27) {
+        this.console.log(`i want to hide the modal`);
+        modalElement.classList.add(`modal-hidden`);
+    }
+});
