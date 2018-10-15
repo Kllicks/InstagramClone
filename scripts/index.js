@@ -41,10 +41,17 @@ function createThumbnail(imageURL) {
     return theContainer;
 }
 
+function drawThumbnail() {
+    let firstImageURL = IMAGES[index];
+    let testThumb = createThumbnail(firstImageURL);
+    document.body.appendChild(testThumb);
+    index ++;
+}
+
 // just draw a thumbnail to the body
 // so we can test the click ability
-let firstImageURL = IMAGES[0];
-let testThumb = createThumbnail(firstImageURL)
-document.body.appendChild(testThumb);
+drawThumbnail();
+drawThumbnail();
+drawThumbnail();
 
 // style this larger version of the image so that it's at least 500px x 500px
