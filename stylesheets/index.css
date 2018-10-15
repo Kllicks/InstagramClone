@@ -57,10 +57,10 @@ html, body {
 
 .modal {
     /* 
-        - cover the whole page
+        1. cover the whole page
             - yep, overlap everything
-        - put a see-through grey color on top of the page
-        - center the contents
+        2. put a see-through grey color on top of the page
+        3. center the contents
     */
 
     /* 
@@ -70,9 +70,18 @@ html, body {
     position: absolute;
     left: 0;
     top: 0;
-
     width: 100%;
     height: 100%;
-
     /* border: 5px solid red; */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* opacity: 0.0 -> this makes the image see through */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-hidden {
+    display: none;
+    /* visibility: hidden; */
 }
