@@ -89,5 +89,5 @@ Then you write this:
 let allImagesOnPage = document.querySelectorAll('a');
 ```
 
-- you pass it 
--
+- you pass it a string that contains a CSS selector
+- it returns *all* matching elements as an Array
