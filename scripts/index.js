@@ -27,7 +27,6 @@ function createImage(imageURL) {
         theImage.parentNode.removeChild(theImage);
         outputElement.src = event.target.src;
         
-        
     });
 
     return theImage;
@@ -47,7 +46,5 @@ function createThumbnail(imageURL) {
 let firstImageURL = IMAGES[0];
 let testThumb = createThumbnail(firstImageURL)
 document.body.appendChild(testThumb);
-
-// create a placeholder <img> tag in your HTML. It will show a large version of an image that gets clicked.
 
 // style this larger version of the image so that it's at least 500px x 500px
