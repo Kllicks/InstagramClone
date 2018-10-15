@@ -4,6 +4,8 @@ const IMAGES = [
     "https://www.pixel-creation.com/wp-content/uploads/houston-texans-computer-wallpaper-52917-1600x900-px-hdwallsource-800x800.jpg",
     "http://ava7.com/w/basketball-teams/houston-rockets/houston-rockets-nba-basketball-team.jpg"
 ]
+const outputElement = document.querySelector('[data-output]');
+let index = 0;
 
 // function that generates the thumbnail div
 // function that generates an imag element
@@ -15,14 +17,15 @@ function createImage(imageURL) {
 
     // add an event listener to the image
     theImage.addEventListener('click', function(event) {
-        console.log('hello');
+        console.log('test');
+        console.log(event.target.src);
         // the element that got clicked is accessible
         // as `event.target`
         // and, i can read the `src` attribute!
-        console.log(event.target.src);
-
         // i can now set the image's/outputElement's src 
         // to `event.target.src`
+        theImage.parentNode.removeChild(theImage);
+        outputElement.src = event.target.src;
         
         
     });
