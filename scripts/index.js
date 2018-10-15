@@ -51,7 +51,7 @@ function drawThumbnail() {
 // just draw a thumbnail to the body
 // so we can test the click ability
 drawThumbnail();
-drawThumbnail();
-drawThumbnail();
+// drawThumbnail();
+// drawThumbnail();
 
 // style this larger version of the image so that it's at least 500px x 500px
