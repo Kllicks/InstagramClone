@@ -54,3 +54,25 @@ html, body {
     max-height: 100%;
     max-width: 100%;
 }
+
+.modal {
+    /* 
+        - cover the whole page
+            - yep, overlap everything
+        - put a see-through grey color on top of the page
+        - center the contents
+    */
+
+    /* 
+    To make things overlap, use position: absolute
+    This lets you set coordinate for where exactly you want to place an element.
+    */
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    /* border: 5px solid red; */
+}
