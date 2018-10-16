@@ -124,6 +124,9 @@ function createThumbnail(imageURL) {
                 //         // modalElement.classList.add(`modal-hidden`);
                 //     }
                 // });
+
+// wrap the following in a main(){}
+// then after just call the main();
 window.addEventListener('keydown', function (event) {
     // console.log(`you pressed a key`);
     // console.log(event);
@@ -142,10 +145,16 @@ window.addEventListener('click', function (event) {
 });
   // Add global previous/next keyboard listeners
 window.addEventListener(`keydown`, function (event) {
-    console.log(event.keyCode);
+    // console.log(event.keyCode);
     if (event.keyCode === 37) {
-        console.log(`go to previous image`);
+        // console.log(`go to previous image`);
+        let curr = outputElement.getAttribute(`src`);
+        let prev = getPrevImage(curr);
+        outputElement.setAttribute(`src`, prev);
     } else if (event.keyCode === 39) {
-        console.log(`go to the next image`);
+        // console.log(`go to the next image`);
+        let curr = outputElement.getAttribute(`src`);
+        let next = getNextImage(curr);
+        outputElement.setAttribute(`src`, next);
     }
 });
