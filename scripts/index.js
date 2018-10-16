@@ -4,7 +4,17 @@ const IMAGES = [
     "https://www.pixel-creation.com/wp-content/uploads/houston-texans-computer-wallpaper-52917-1600x900-px-hdwallsource-800x800.jpg",
     "http://ava7.com/w/basketball-teams/houston-rockets/houston-rockets-nba-basketball-team.jpg"
 ]
+// FOR OBJECTS:
+    // not used for my current code setup since I'm using an array
+function getCurrentIndex(currentURL) {
+    // let index = IMAGES.map(function (imgObj){
+    //     // provides an array of URL's
+    //     return imgObj.url;
+    // }).indexOf(currentURL);
 
+    let index = IMAGES.map(imgObj => imgObj.url).indexOf(currentURL);
+    return index;
+}
 // Array Navigation functions
 function getNextImage(currentURL) {
     // find the currentURL's index in the IMAGES array
